@@ -38,12 +38,12 @@ describe('server/app.js', function() {
     });
   });
 
-  it('page says it is working!', (done) => {
+  it('page says CircleCI is finally working!', (done) => {
     chai.request(server)
       .get('/')
       .end((err, res) => {
         expect(err).not.exist;
-        expect(JSON.stringify(res.text)).to.contain('It is working!');
+        expect(JSON.stringify(res.text)).to.contain('CircleCI is finally working!');
         done();
       });
     });
