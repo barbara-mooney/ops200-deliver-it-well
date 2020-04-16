@@ -22,10 +22,9 @@ jobs:
                 key: v1-dependencies-{{ checksum "package.json" }}
     
             - run: yarn test
-
     deploy:
         docker:
-            - image: circleci/node:8.11
+            - image: buildpack-deps:trusty
     steps:
         - checkout
         - run:
